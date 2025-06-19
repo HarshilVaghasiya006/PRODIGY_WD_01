@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  background: white;
+  color: #007aff;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #4facfe;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Section Styling */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#home {
+  background-color: #e3f2fd;
+}
+#services {
+  background-color: #d0f0c0;
+}
+#portfolio {
+  background-color: #fce4ec;
+}
+#contact {
+  background-color: #fff3e0;
+}
+.navbar {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar.scrolled {
+  background: #1e88e5;
+}
+.navbar {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+.navbar.scrolled {
+  background-color: #1e88e5; /* Solid blue */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.2); /* subtle white overlay */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* brighter on hover */
+  color: #007aff;
+  transform: scale(1.05);
+}
+.navbar {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar.scrolled {
+  background: #1e88e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
